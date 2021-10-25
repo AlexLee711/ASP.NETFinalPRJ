@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbArtsCenterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TableCenters1081753">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="CNName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ENName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Genre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Img" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="char" MaxLength="15" />
+    <Property Name="descript" Type="text" />
+  </EntityType>
+  <EntityType Name="TableMembers1081753">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_Account" Type="nvarchar" MaxLength="50" />
+    <Property Name="User_Pwd" Type="nvarchar" MaxLength="50" />
+    <Property Name="User_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="User_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="User_Address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TableWishLists1081753">
+    <Key>
+      <PropertyRef Name="Wish_Id" />
+    </Key>
+    <Property Name="Wish_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CNName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ENName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="User_Account" Type="nvarchar" MaxLength="50" />
+    <Property Name="Code" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityContainer Name="dbArtsCenterModelStoreContainer">
+    <EntitySet Name="TableCenters1081753" EntityType="Self.TableCenters1081753" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TableMembers1081753" EntityType="Self.TableMembers1081753" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TableWishLists1081753" EntityType="Self.TableWishLists1081753" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
